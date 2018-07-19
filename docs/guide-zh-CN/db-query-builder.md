@@ -293,7 +293,7 @@ you do not have to add parameters manually.
 - `exists`: 需要一个操作数，该操作数必须是代表子查询 [[yii\db\Query]] 的一个实例，
   它将会构建一个 `EXISTS (sub-query)` 表达式。
 
-- `not exists`: 用法和 `exists` 操作符类似，它将创建一个  `NOT EXISTS (sub-query)` 表达式。
+- `not exists`: 用法和 `exists` 操作符类似，它将创建一个  `NOT EXISTS (sub-query)` 表达式。(not exists 子查询关联表会把表名和字段作为值生成sql导致查询错误)
 
 - `>`, `<=`, 或者其他包含两个操作数的合法 DB 操作符: 第一个操作数必须为字段的名称，
   而第二个操作数则应为一个值。例如，`['>', 'age', 10]` 将会生成 `age>10`。
